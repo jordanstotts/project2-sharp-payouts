@@ -21,9 +21,9 @@ function App() {
         <Routes>
           <Route path="/" element={ <Leagues />} />
           <Route path="/NBA" element={ <NBA />} />
-          <Route path="/NBA" element={ <NFL />} />
-          <Route path="/NBA" element={ <MLB />} />
-          <Route path="/NBA" element={ <NHL />} />
+          <Route path="/NFL" element={ <NFL />} />
+          <Route path="/MLB" element={ <MLB />} />
+          <Route path="/NHL" element={ <NHL />} />
         </Routes>
       </main>
     </div>
