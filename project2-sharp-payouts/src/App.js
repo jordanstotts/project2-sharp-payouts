@@ -20,7 +20,10 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={ <Leagues />} />
-          <Route path="/NBA" elemetn={ <NBA />} />
+          <Route path="/NBA" element={ <NBA />} />
+          <Route path="/NBA" element={ <NFL />} />
+          <Route path="/NBA" element={ <MLB />} />
+          <Route path="/NBA" element={ <NHL />} />
         </Routes>
       </main>
     </div>
