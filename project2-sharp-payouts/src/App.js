@@ -11,19 +11,19 @@ import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <header>
-        <h1>
+        <h1 className='home-header'>
           <a href="/">Sharp Payouts</a>
         </h1>
       </header>
       <main>
         <Routes>
-          <Route path="/" element={ <Leagues />} />
-          <Route path="/NBA" element={ <NBA />} />
-          <Route path="/NFL" element={ <NFL />} />
-          <Route path="/MLB" element={ <MLB />} />
-          <Route path="/NHL" element={ <NHL />} />
+          <Route path="/" element={ <Leagues /> } />
+          <Route path="/NBA" element={ <NBA /> } />
+          <Route path="/NFL" element={ <NFL /> } />
+          <Route path="/MLB" element={ <MLB /> } />
+          <Route path="/NHL" element={ <NHL /> } />
         </Routes>
       </main>
     </div>

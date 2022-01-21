@@ -8,17 +8,22 @@ const NFL = () => {
       <Nav>
           <NavItem>
             <NavLink active href="#">
-              Link
+              NBA
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="#">
-              Another Link
+              NFL
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink disabled href="#">
-              Disabled Link
+            <NavLink active href="#">
+              MLB
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink active href="#">
+              NHL
             </NavLink>
           </NavItem>
         </Nav>

@@ -9,7 +9,7 @@ import { Link,  } from 'react-router-dom'
 
 const Leagues = () => {
   return (
-        <CardGroup>
+        <CardGroup className='leagues'>
             <Link to={ "/NBA" }>
                 <div>
                 <Card className='nba'>
