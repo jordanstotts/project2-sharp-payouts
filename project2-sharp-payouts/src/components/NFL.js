@@ -3,32 +3,28 @@ import { Nav, NavItem, NavLink, Table } from 'reactstrap'
 
 
 const NFL = () => {
+  const nflLogo = require("https://i0.wp.com/sportytell.com/wp-content/uploads/2020/11/NFL-Team-Logos.jpg?resize=680%2C350&ssl=1").default
+
   return (
     <div>
       <Nav>
           <NavItem>
-            <NavLink active href="#">
-              NBA
-            </NavLink>
+          <NavLink active href={"/NBA"}>NBA</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">
-              NFL
-            </NavLink>
+          <NavLink active href={"/NFL"}>NFL</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink active href="#">
-              MLB
-            </NavLink>
+            <NavLink active href={"/MLB"}>MLB</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink active href="#">
-              NHL
-            </NavLink>
+          <NavLink active href={"/NHL"}>NHL</NavLink>
           </NavItem>
         </Nav>
 
-        <div>League logo and name</div>
+        <div>
+          {`${nflLogo} | NFL`}
+        </div>
 
         <Table hover>
             <thead>

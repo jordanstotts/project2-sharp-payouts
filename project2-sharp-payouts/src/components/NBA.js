@@ -1,34 +1,32 @@
 import React from 'react';
 import { Nav, NavItem, NavLink, Table } from 'reactstrap'
+import { Route, Routes, Link } from 'react-router-dom'
 
 
-const NBA = () => {  
+
+const NBA = () => { 
+  const nbaLogo = require("https://blog.logomyway.com/wp-content/uploads/2017/01/nba-logo-design.jpg").default
+
   return (
     <div>
       <Nav>
           <NavItem>
-            <NavLink active href="#">
-              NBA
-            </NavLink>
+          <NavLink active href={"/NBA"}>NBA</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">
-              NFL
-            </NavLink>
+          <NavLink active href={"/NFL"}>NFL</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink active href="#">
-              MLB
-            </NavLink>
+            <NavLink active href={"/MLB"}>MLB</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink active href="#">
-              NHL
-            </NavLink>
+          <NavLink active href={"/NHL"}>NHL</NavLink>
           </NavItem>
         </Nav>
 
-        <div>League logo and name</div>
+        <div>
+          {`${nbaLogo} | NBA`}
+        </div>
 
         <Table hover>
             <thead>

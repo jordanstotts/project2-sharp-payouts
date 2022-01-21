@@ -3,32 +3,28 @@ import { Nav, NavItem, NavLink, Table } from 'reactstrap'
 
 
 const NHL = () => {
+  const nhlLogo = require("https://1000logos.net/wp-content/uploads/2017/05/NHL-emblem-500x450.jpg").default
+
   return (
     <div>
       <Nav>
           <NavItem>
-            <NavLink active href="#">
-              NBA
-            </NavLink>
+          <NavLink active href={"/NBA"}>NBA</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">
-              NFL
-            </NavLink>
+          <NavLink active href={"/NFL"}>NFL</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink active href="#">
-              MLB
-            </NavLink>
+            <NavLink active href={"/MLB"}>MLB</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink active href="#">
-              NHL
-            </NavLink>
+          <NavLink active href={"/NHL"}>NHL</NavLink>
           </NavItem>
         </Nav>
 
-        <div>League logo and name</div>
+        <div>
+          {`${nhlLogo} | NHL`}
+        </div>
 
         <Table hover>
             <thead>

@@ -3,32 +3,28 @@ import { Nav, NavItem, NavLink, Table } from 'reactstrap'
 
 
 const MLB = () => {
+  const mlbLogo = require("https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Major_League_Baseball_logo.svg/1920px-Major_League_Baseball_logo.svg.png").default
+
   return (
     <div>
       <Nav>
           <NavItem>
-            <NavLink active href="#">
-              NBA
-            </NavLink>
+          <NavLink active href={"/NBA"}>NBA</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">
-              NFL
-            </NavLink>
+          <NavLink active href={"/NFL"}>NFL</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink active href="#">
-              MLB
-            </NavLink>
+            <NavLink active href={"/MLB"}>MLB</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink active href="#">
-              NHL
-            </NavLink>
+          <NavLink active href={"/NHL"}>NHL</NavLink>
           </NavItem>
         </Nav>
 
-        <div>League logo and name</div>
+        <div>
+          {`${mlbLogo} | MLB`}
+        </div>
 
         <Table hover>
             <thead>
