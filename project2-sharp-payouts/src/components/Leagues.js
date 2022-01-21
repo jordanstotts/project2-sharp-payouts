@@ -1,10 +1,6 @@
 import React from 'react';
-import NBA from './NBA';
-import NFL from './NFL';
-import MLB from './MLB';
-import NHL from './NHL';
 import { CardGroup, Card, CardImg, CardBody, CardTitle } from 'reactstrap'
-import { Link,  } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 const Leagues = () => {
