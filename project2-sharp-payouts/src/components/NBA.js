@@ -5,19 +5,44 @@ import { Nav, NavItem, NavLink, Table } from 'reactstrap'
 
 const NBA = () => { 
   const nbaLogo = require("https://blog.logomyway.com/wp-content/uploads/2017/01/nba-logo-design.jpg").default
-
-  const [nba, setNba] = useState([])
+  
+//---------spread fetch request --------------
+  const [nbaSpread, setNbaSpread] = useState([])
   useEffect(() => {
     const url = 'https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=spreads&apiKey=7016872381cf91ff6bd37f4ec388ae9b'
     fetch(url)
         .then((res) => res.json())
         .then((json) => {
-          setNba(json)
+          setNbaSpread(json)
         })
         .catch(console.error)
   }, [])
 
-  if (!nba) {
+//---------totals fetch request --------------
+  const [nbaTotals, setNbaTotals] = useState([])
+    useEffect(() => {
+      const url = 'https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=totals&apiKey=7016872381cf91ff6bd37f4ec388ae9b'
+      fetch(url)
+          .then((res) => res.json())
+          .then((json) => {
+            setNbaTotals(json)
+          })
+          .catch(console.error)
+    }, [])
+
+//---------moneyline fetch request --------------
+  const [nbaMoneyline, setNbaMoneyline] = useState([])
+  useEffect(() => {
+    const url = 'https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=h2h&apiKey=7016872381cf91ff6bd37f4ec388ae9b'
+    fetch(url)
+        .then((res) => res.json())
+        .then((json) => {
+          setNbaMoneyline(json)
+        })
+        .catch(console.error)
+  }, [])
+
+  if (!nbaSpread, !nbaTotals, !nbaMoneyline) {
     return <p>Loading current odds ...</p>
   }
 
