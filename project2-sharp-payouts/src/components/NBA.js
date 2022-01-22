@@ -87,22 +87,69 @@ console.log(nbaSpread)
             </thead>
             <tbody>
               <tr>
-                  { nbaSpread.map(matchup => {
-                    return (
+                <td>
+                { nbaSpread.map(matchup => {
+                  return (
                       <div>
-                        <th scope="row"> 
+                        <th scope="row">
                           <div>
-                            {/* <p>{ matchup.home_team } vs { matchup.away_team }</p> */}
+                            <p>{ matchup.home_team }</p> 
+                            <br/>
+                            <p>{ matchup.away_team }</p>
                           </div>
                         </th>
+                      </div>
+                  )
+                })}
+                </td>
+                <td>
+                  { nbaSpread.map(spread => {
+                    return (
+                      <div>
                         <td>
                           <div>
-                            {/* <p>{ matchup.bookmakers[0].markets[0].outcomes[0].point }</p> */}
+                            <p>{ spread.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ spread.bookmakers[0].markets[0].outcomes[0].price }</p>
+                          </div>
+                          <div>
+                            <p>{ spread.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ spread.bookmakers[0].markets[0].outcomes[1].price }</p>
                           </div>
                         </td>
                       </div>
                     )
                   })}
+                </td>
+                  <td>
+                  { nbaTotals.map(totals => {
+                    return (
+                      <div>
+                        <td>
+                          <div>
+                            <p>{ totals.bookmakers[1].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[1].markets[0].outcomes[0].price }</p>
+                          </div>
+                          <div>
+                            <p>{ totals.bookmakers[1].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[1].markets[0].outcomes[1].price }</p>
+                          </div>
+                        </td>
+                      </div>
+                    )
+                  })}
+                  </td>
+                  <td>
+                  { nbaMoneyline.map(moneyline => {
+                    return (
+                      <div>
+                        <td>
+                          <div>
+                            <p>{ moneyline.bookmakers[1].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[1].markets[0].outcomes[0].price }</p>
+                          </div>
+                          <div>
+                            <p>{ moneyline.bookmakers[1].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[1].markets[0].outcomes[1].price }</p>
+                          </div>
+                        </td>
+                      </div>
+                    )
+                  })}
+                  </td>
               </tr>
             </tbody>
         </Table> 
