@@ -85,46 +85,69 @@ const MLB = () => {
             </thead>
             <tbody>
               <tr>
-                <th scope="row">
-                  Team 1 vs Team 2 <br/>Game location and time
-                </th>
                 <td>
-                  Team 1 odds <br/> Team 2 odds
+                { mlbSpread.map(matchup => {
+                  return (
+                      <div>
+                        <th scope="row">
+                          <div>
+                            <p>{ matchup.home_team }</p> 
+                            <br/>
+                            <p>{ matchup.away_team }</p>
+                          </div>
+                        </th>
+                      </div>
+                  )
+                })}
                 </td>
                 <td>
-                  Over odds <br/> under odds
+                  { mlbSpread.map(spread => {
+                    return (
+                      <div>
+                        <td>
+                          <div>
+                            <p>{ spread.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ spread.bookmakers[0].markets[0].outcomes[0].price }</p>
+                          </div>
+                          <div>
+                            <p>{ spread.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ spread.bookmakers[0].markets[0].outcomes[1].price }</p>
+                          </div>
+                        </td>
+                      </div>
+                    )
+                  })}
                 </td>
-                <td>
-                Team 1 odds <br/> Team 2 odds
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  Team 1 vs Team 2 <br/>Game location and time
-                </th>
-                <td>
-                  Team 1 odds <br/> Team 2 odds
-                </td>
-                <td>
-                  Over odds <br/> under odds
-                </td>
-                <td>
-                Team 1 odds <br/> Team 2 odds
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  Team 1 vs Team 2 <br/>Game location and time
-                </th>
-                <td>
-                  Team 1 odds <br/> Team 2 odds
-                </td>
-                <td>
-                  Over odds <br/> under odds
-                </td>
-                <td>
-                Team 1 odds <br/> Team 2 odds
-                </td>
+                  <td>
+                  { mlbTotals.map(totals => {
+                    return (
+                      <div>
+                        <td>
+                          <div>
+                            <p>{ totals.bookmakers[1].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[1].markets[0].outcomes[0].price }</p>
+                          </div>
+                          <div>
+                            <p>{ totals.bookmakers[1].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[1].markets[0].outcomes[1].price }</p>
+                          </div>
+                        </td>
+                      </div>
+                    )
+                  })}
+                  </td>
+                  <td>
+                  { mlbMoneyline.map(moneyline => {
+                    return (
+                      <div>
+                        <td>
+                          <div>
+                            <p>{ moneyline.bookmakers[1].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[1].markets[0].outcomes[0].price }</p>
+                          </div>
+                          <div>
+                            <p>{ moneyline.bookmakers[1].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[1].markets[0].outcomes[1].price }</p>
+                          </div>
+                        </td>
+                      </div>
+                    )
+                  })}
+                  </td>
               </tr>
             </tbody>
         </Table> 
