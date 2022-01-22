@@ -87,47 +87,25 @@ const NBA = () => {
             </thead>
             <tbody>
               <tr>
-                <th scope="row">
-                  Team 1 vs Team 2 <br/>Game location and time
-                </th>
-                <td>
-                  Team 1 odds <br/> Team 2 odds
-                </td>
-                <td>
-                  Over odds <br/> under odds
-                </td>
-                <td>
-                Team 1 odds <br/> Team 2 odds
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  Team 1 vs Team 2 <br/>Game location and time
-                </th>
-                <td>
-                  Team 1 odds <br/> Team 2 odds
-                </td>
-                <td>
-                  Over odds <br/> under odds
-                </td>
-                <td>
-                Team 1 odds <br/> Team 2 odds
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  Team 1 vs Team 2 <br/>Game location and time
-                </th>
-                <td>
-                  Team 1 odds <br/> Team 2 odds
-                </td>
-                <td>
-                  Over odds <br/> under odds
-                </td>
-                <td>
-                Team 1 odds <br/> Team 2 odds
-                </td>
-              </tr>
+                  { nbaSpread.map(matchup => {
+                    return (
+                      <div>
+                        <th scope="row"> 
+                          <div>
+                            {/* <p>{ matchup.home_team } vs { matchup.away_team }</p> */}
+                            {/* the above pulls the correct data        */}
+                          </div>
+                        </th>
+                        <td>
+                          <div>
+                            {/* <p>{ matchup.bookmakers.markets.outcomes.point }</p> */}
+                            {/*screen goes blank when this runs. Have tried using [] to access specific data too */}
+                          </div>
+                        </td>
+                      </div>
+                    )
+                  })}
+              </tr> : <tr><td colSpan="5">Loading...</td></tr>
             </tbody>
         </Table> 
       </div>
