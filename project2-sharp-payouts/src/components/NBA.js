@@ -17,7 +17,7 @@ const NBA = () => {
         })
         .catch(console.error)
   }, [])
-
+console.log(nbaSpread)
 //---------totals fetch request --------------
   const [nbaTotals, setNbaTotals] = useState([])
     useEffect(() => {
@@ -93,19 +93,17 @@ const NBA = () => {
                         <th scope="row"> 
                           <div>
                             {/* <p>{ matchup.home_team } vs { matchup.away_team }</p> */}
-                            {/* the above pulls the correct data        */}
                           </div>
                         </th>
                         <td>
                           <div>
-                            {/* <p>{ matchup.bookmakers.markets.outcomes.point }</p> */}
-                            {/*screen goes blank when this runs. Have tried using [] to access specific data too */}
+                            {/* <p>{ matchup.bookmakers[0].markets[0].outcomes[0].point }</p> */}
                           </div>
                         </td>
                       </div>
                     )
                   })}
-              </tr> : <tr><td colSpan="5">Loading...</td></tr>
+              </tr>
             </tbody>
         </Table> 
       </div>
