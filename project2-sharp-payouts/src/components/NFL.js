@@ -3,7 +3,6 @@ import { Nav, NavItem, NavLink, Table } from 'reactstrap'
 
 
 const NFL = () => {
-  const nflLogo = require("https://i0.wp.com/sportytell.com/wp-content/uploads/2020/11/NFL-Team-Logos.jpg?resize=680%2C350&ssl=1").default
 
   //---------spread fetch request --------------
   const [nflSpread, setNflSpread] = useState([])
@@ -45,6 +44,10 @@ const NFL = () => {
     return <p>Loading current odds ...</p>
   }
 
+  //----------------current date -----------------
+  const current = new Date();
+  const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
+
   return (
     <div>
       <Nav>
@@ -63,14 +66,14 @@ const NFL = () => {
         </Nav>
 
         <div>
-          {`${nflLogo} | NFL`}
+          <img></img> | NFL
         </div>
 
         <Table hover>
             <thead>
               <tr>
                 <th>
-                  Date
+                  { date }
                 </th>
                 <th>
                   Spread
@@ -122,10 +125,10 @@ const NFL = () => {
                       <div>
                         <td>
                           <div>
-                            <p>{ totals.bookmakers[1].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[1].markets[0].outcomes[0].price }</p>
+                            <p>{ totals.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
-                            <p>{ totals.bookmakers[1].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[1].markets[0].outcomes[1].price }</p>
+                            <p>{ totals.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[1].price }</p>
                           </div>
                         </td>
                       </div>
@@ -138,10 +141,10 @@ const NFL = () => {
                       <div>
                         <td>
                           <div>
-                            <p>{ moneyline.bookmakers[1].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[1].markets[0].outcomes[0].price }</p>
+                            <p>{ moneyline.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
-                            <p>{ moneyline.bookmakers[1].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[1].markets[0].outcomes[1].price }</p>
+                            <p>{ moneyline.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[1].price }</p>
                           </div>
                         </td>
                       </div>

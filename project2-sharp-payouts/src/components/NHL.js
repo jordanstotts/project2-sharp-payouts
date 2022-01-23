@@ -3,7 +3,6 @@ import { Nav, NavItem, NavLink, Table } from 'reactstrap'
 
 
 const NHL = () => {
-  const nhlLogo = require("https://1000logos.net/wp-content/uploads/2017/05/NHL-emblem-500x450.jpg").default
 
   //---------spread fetch request --------------
   const [nhlSpread, setNhlSpread] = useState([])
@@ -16,7 +15,7 @@ const NHL = () => {
         })
         .catch(console.error)
   }, [])
-
+console.log(setNhlSpread)
 //---------totals fetch request --------------
   const [nhlTotals, setNhlTotals] = useState([])
     useEffect(() => {
@@ -45,6 +44,10 @@ const NHL = () => {
     return <p>Loading current odds ...</p>
   }
 
+  //----------------current date -----------------
+  const current = new Date();
+  const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
+
   return (
     <div>
       <Nav>
@@ -63,14 +66,14 @@ const NHL = () => {
         </Nav>
 
         <div>
-          {`${nhlLogo} | NHL`}
+          <img></img> | NHL
         </div>
 
         <Table hover>
             <thead>
               <tr>
                 <th>
-                  Date
+                  { date }
                 </th>
                 <th>
                   Spread
@@ -106,7 +109,7 @@ const NHL = () => {
                       <div>
                         <td>
                           <div>
-                            <p>{ spread.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ spread.bookmakers[0].markets[0].outcomes[0].price }</p>
+                            <p>{ spread.bookmakers[0].markets[0].outcomes[0].point}</p><p>{ spread.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
                             <p>{ spread.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ spread.bookmakers[0].markets[0].outcomes[1].price }</p>
@@ -122,10 +125,10 @@ const NHL = () => {
                       <div>
                         <td>
                           <div>
-                            <p>{ totals.bookmakers[1].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[1].markets[0].outcomes[0].price }</p>
+                            <p>{ totals.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
-                            <p>{ totals.bookmakers[1].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[1].markets[0].outcomes[1].price }</p>
+                            <p>{ totals.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[1].price }</p>
                           </div>
                         </td>
                       </div>
@@ -138,10 +141,10 @@ const NHL = () => {
                       <div>
                         <td>
                           <div>
-                            <p>{ moneyline.bookmakers[1].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[1].markets[0].outcomes[0].price }</p>
+                            <p>{ moneyline.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
-                            <p>{ moneyline.bookmakers[1].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[1].markets[0].outcomes[1].price }</p>
+                            <p>{ moneyline.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[1].price }</p>
                           </div>
                         </td>
                       </div>
@@ -150,7 +153,7 @@ const NHL = () => {
                   </td>
               </tr>
             </tbody>
-        </Table> 
+        </Table>  
       </div>
   )
 };

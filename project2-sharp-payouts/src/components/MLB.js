@@ -3,7 +3,6 @@ import { Nav, NavItem, NavLink, Table } from 'reactstrap'
 
 
 const MLB = () => {
-  const mlbLogo = require("https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Major_League_Baseball_logo.svg/1920px-Major_League_Baseball_logo.svg.png").default
 
   //---------spread fetch request --------------
   const [mlbSpread, setMlbSpread] = useState([])
@@ -45,6 +44,10 @@ const MLB = () => {
     return <p>Loading current odds ...</p>
   }
 
+  //----------------current date -----------------
+  const current = new Date();
+  const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
+
   return (
     <div>
       <Nav>
@@ -63,14 +66,14 @@ const MLB = () => {
         </Nav>
 
         <div>
-          {`${mlbLogo} | MLB`}
+          <img></img> | MLB
         </div>
 
         <Table hover>
             <thead>
               <tr>
                 <th>
-                  Date
+                  { date }
                 </th>
                 <th>
                   Spread
@@ -122,10 +125,10 @@ const MLB = () => {
                       <div>
                         <td>
                           <div>
-                            <p>{ totals.bookmakers[1].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[1].markets[0].outcomes[0].price }</p>
+                            <p>{ totals.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
-                            <p>{ totals.bookmakers[1].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[1].markets[0].outcomes[1].price }</p>
+                            <p>{ totals.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[1].price }</p>
                           </div>
                         </td>
                       </div>
@@ -138,10 +141,10 @@ const MLB = () => {
                       <div>
                         <td>
                           <div>
-                            <p>{ moneyline.bookmakers[1].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[1].markets[0].outcomes[0].price }</p>
+                            <p>{ moneyline.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
-                            <p>{ moneyline.bookmakers[1].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[1].markets[0].outcomes[1].price }</p>
+                            <p>{ moneyline.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[1].price }</p>
                           </div>
                         </td>
                       </div>

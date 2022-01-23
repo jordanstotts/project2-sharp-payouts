@@ -4,7 +4,6 @@ import { Nav, NavItem, NavLink, Table } from 'reactstrap'
 
 
 const NBA = () => { 
-  const nbaLogo = require("https://blog.logomyway.com/wp-content/uploads/2017/01/nba-logo-design.jpg").default
   
 //---------spread fetch request --------------
   const [nbaSpread, setNbaSpread] = useState([])
@@ -17,7 +16,7 @@ const NBA = () => {
         })
         .catch(console.error)
   }, [])
-console.log(nbaSpread)
+
 //---------totals fetch request --------------
   const [nbaTotals, setNbaTotals] = useState([])
     useEffect(() => {
@@ -46,6 +45,9 @@ console.log(nbaSpread)
     return <p>Loading current odds ...</p>
   }
 
+//----------------current date -----------------
+  const current = new Date();
+  const date = `${current.getMonth()+1}/${current.getDate()}/${current.getFullYear()}`;
 
   return (
     <div>
@@ -65,14 +67,15 @@ console.log(nbaSpread)
         </Nav>
 
         <div>
-          {`${nbaLogo} | NBA`}
+          <img></img> | NBA
         </div>
+
 
         <Table hover>
             <thead>
               <tr>
                 <th>
-                  Date
+                  { date }
                 </th>
                 <th>
                   Spread
@@ -124,10 +127,10 @@ console.log(nbaSpread)
                       <div>
                         <td>
                           <div>
-                            <p>{ totals.bookmakers[1].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[1].markets[0].outcomes[0].price }</p>
+                            <p>{ totals.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
-                            <p>{ totals.bookmakers[1].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[1].markets[0].outcomes[1].price }</p>
+                            <p>{ totals.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[1].price }</p>
                           </div>
                         </td>
                       </div>
@@ -140,10 +143,10 @@ console.log(nbaSpread)
                       <div>
                         <td>
                           <div>
-                            <p>{ moneyline.bookmakers[1].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[1].markets[0].outcomes[0].price }</p>
+                            <p>{ moneyline.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
-                            <p>{ moneyline.bookmakers[1].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[1].markets[0].outcomes[1].price }</p>
+                            <p>{ moneyline.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[1].price }</p>
                           </div>
                         </td>
                       </div>
