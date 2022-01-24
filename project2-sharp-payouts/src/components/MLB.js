@@ -7,7 +7,7 @@ const MLB = () => {
   //---------spread fetch request --------------
   const [mlbSpread, setMlbSpread] = useState([])
   useEffect(() => {
-    const url = 'https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/?regions=us&oddsFormat=american&markets=spreads&apiKey=7016872381cf91ff6bd37f4ec388ae9b'
+    const url = 'https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/?regions=us&oddsFormat=american&markets=spreads&apiKey=944e95fe3418a127a25971b3eff10031'
     fetch(url)
         .then((res) => res.json())
         .then((json) => {
@@ -19,7 +19,7 @@ const MLB = () => {
 //---------totals fetch request --------------
   const [mlbTotals, setMlbTotals] = useState([])
     useEffect(() => {
-      const url = 'https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/?regions=us&oddsFormat=american&markets=totals&apiKey=7016872381cf91ff6bd37f4ec388ae9b'
+      const url = 'https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/?regions=us&oddsFormat=american&markets=totals&apiKey=944e95fe3418a127a25971b3eff10031'
       fetch(url)
           .then((res) => res.json())
           .then((json) => {
@@ -31,7 +31,7 @@ const MLB = () => {
 //---------moneyline fetch request --------------
   const [mlbMoneyline, setMlbMoneyline] = useState([])
   useEffect(() => {
-    const url = 'https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/?regions=us&oddsFormat=american&markets=h2h&apiKey=7016872381cf91ff6bd37f4ec388ae9b'
+    const url = 'https://api.the-odds-api.com/v4/sports/baseball_mlb/odds/?regions=us&oddsFormat=american&markets=h2h&apiKey=944e95fe3418a127a25971b3eff10031'
     fetch(url)
         .then((res) => res.json())
         .then((json) => {
