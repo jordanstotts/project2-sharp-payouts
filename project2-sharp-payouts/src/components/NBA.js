@@ -4,11 +4,12 @@ import { Nav, NavItem, NavLink, Table } from 'reactstrap'
 
 
 const NBA = () => { 
-  
+  const API_KEY = process.env.REACT_APP_API_KEY;
+
 //---------spread fetch request --------------
   const [nbaSpread, setNbaSpread] = useState([])
   useEffect(() => {
-    const url = 'https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=spreads&apiKey=944e95fe3418a127a25971b3eff10031'
+    const url = `https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=spreads&apiKey=${API_KEY}`
     fetch(url)
         .then((res) => res.json())
         .then((json) => {
@@ -19,7 +20,7 @@ const NBA = () => {
 //---------totals fetch request --------------
   const [nbaTotals, setNbaTotals] = useState([])
     useEffect(() => {
-      const url = 'https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=totals&apiKey=944e95fe3418a127a25971b3eff10031'
+      const url = `https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=totals&apiKey=${API_KEY}`
       fetch(url)
           .then((res) => res.json())
           .then((json) => {
@@ -31,7 +32,7 @@ const NBA = () => {
 //---------moneyline fetch request --------------
   const [nbaMoneyline, setNbaMoneyline] = useState([])
   useEffect(() => {
-    const url = 'https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=h2h&apiKey=944e95fe3418a127a25971b3eff10031'
+    const url = `https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=h2h&apiKey=${API_KEY}`
     fetch(url)
         .then((res) => res.json())
         .then((json) => {
