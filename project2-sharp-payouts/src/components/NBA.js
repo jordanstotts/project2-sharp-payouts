@@ -51,7 +51,10 @@ const NBA = () => {
 
   return (
     <div>
-      <Nav>
+      <Nav className='navbar'>
+          <NavItem>
+          <NavLink active href={"/"}>Sharp Payouts</NavLink>
+          </NavItem>
           <NavItem>
           <NavLink active href={"/NBA"}>NBA</NavLink>
           </NavItem>

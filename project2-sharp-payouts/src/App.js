@@ -11,11 +11,6 @@ import { Route, Routes } from 'react-router-dom'
 function App() {
   return (
     <div className="app">
-      <header>
-        <h1 className='home-header'>
-          <a href="/">Sharp Payouts</a>
-        </h1>
-      </header>
       <main>
         <Routes>
           <Route path="/" element={ <Leagues /> } />

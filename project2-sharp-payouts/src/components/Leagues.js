@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom'
 
 const Leagues = () => {
   return (
+      <div>
+        <header>
+            <h1>Sharp Payouts</h1>
+        </header>
         <CardGroup className='leagues'>
             <Link to={ "/NBA" }>
                 <div>
@@ -47,6 +51,7 @@ const Leagues = () => {
             </div>
             </Link> 
         </CardGroup>
+    </div>
     )
 };
 
