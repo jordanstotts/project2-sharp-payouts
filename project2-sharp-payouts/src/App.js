@@ -20,9 +20,9 @@ function App() {
         <Routes>
           <Route path="/" element={ <Leagues /> } />
           <Route path="/NBA" element={ <NBA /> } />
-          <Route path="/NFL" element={ <NFL /> } />
+          {/* <Route path="/NFL" element={ <NFL /> } />
           <Route path="/MLB" element={ <MLB /> } />
-          <Route path="/NHL" element={ <NHL /> } />
+          <Route path="/NHL" element={ <NHL /> } /> */}
         </Routes>
       </main>
     </div>

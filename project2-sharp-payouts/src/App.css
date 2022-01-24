@@ -1,0 +1,57 @@
+body {
+    margin: auto;
+}
+
+.date-header {
+    display: grid inline;
+    text-align: center;
+    color: blue;
+}
+.spread-header {
+    display: grid inline;
+    text-align: center;
+    color: blue;
+}
+.total-header {
+    display: grid inline;
+    text-align: center;
+    color: blue;
+}
+.moneyline-header {
+    display: grid inline;
+    text-align: center;
+    color: blue;
+}
+
+.table tbody tr .matchup div {
+    display: grid;
+    place-self: auto center;
+    justify-items: center;
+    margin: 1.75em;
+}
+
+.table tbody tr .spread div {
+    display: grid;
+    place-self: auto center;
+    justify-items: center;
+    margin: auto;
+    padding-top: 1em;
+
+}
+
+.table tbody tr .total div {
+    display: grid;
+    place-self: auto center;
+    justify-items: center;
+    margin: auto;
+    padding-top: 1em;
+}
+
+.table tbody tr .moneyline div {
+    display: grid;
+    place-self: auto center;
+    justify-items: center;
+    margin: auto;
+    padding-top: 1em;
+}
+

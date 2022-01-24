@@ -1,49 +1,49 @@
 import React, { useState, useEffect }from 'react';
-import { Nav, NavItem, NavLink, Table } from 'reactstrap'
-
+import { Container, Nav, NavItem, NavLink, Table } from 'reactstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const NBA = () => { 
   const API_KEY = process.env.REACT_APP_API_KEY;
 
 //---------spread fetch request --------------
-  const [nbaSpread, setNbaSpread] = useState([])
-  useEffect(() => {
-    const url = `https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=spreads&apiKey=${API_KEY}`
-    fetch(url)
-        .then((res) => res.json())
-        .then((json) => {
-          setNbaSpread(json)
-        })
-        .catch(console.error)
-  }, [])
+  // const [nbaSpread, setNbaSpread] = useState([])
+  // useEffect(() => {
+  //   const url = `https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=spreads&apiKey=${API_KEY}`
+  //   fetch(url)
+  //       .then((res) => res.json())
+  //       .then((json) => {
+  //         setNbaSpread(json)
+  //       })
+  //       .catch(console.error)
+  // }, [])
 //---------totals fetch request --------------
-  const [nbaTotals, setNbaTotals] = useState([])
-    useEffect(() => {
-      const url = `https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=totals&apiKey=${API_KEY}`
-      fetch(url)
-          .then((res) => res.json())
-          .then((json) => {
-            setNbaTotals(json)
-          })
-          .catch(console.error)
-    }, [])
+  // const [nbaTotals, setNbaTotals] = useState([])
+  //   useEffect(() => {
+  //     const url = `https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=totals&apiKey=${API_KEY}`
+  //     fetch(url)
+  //         .then((res) => res.json())
+  //         .then((json) => {
+  //           setNbaTotals(json)
+  //         })
+  //         .catch(console.error)
+  //   }, [])
 
 //---------moneyline fetch request --------------
-  const [nbaMoneyline, setNbaMoneyline] = useState([])
-  useEffect(() => {
-    const url = `https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=h2h&apiKey=${API_KEY}`
-    fetch(url)
-        .then((res) => res.json())
-        .then((json) => {
-          setNbaMoneyline(json)
-        })
-        .catch(console.error)
-  }, [])
+  // const [nbaMoneyline, setNbaMoneyline] = useState([])
+  // useEffect(() => {
+  //   const url = `https://api.the-odds-api.com/v4/sports/basketball_nba/odds/?regions=us&oddsFormat=american&markets=h2h&apiKey=${API_KEY}`
+  //   fetch(url)
+  //       .then((res) => res.json())
+  //       .then((json) => {
+  //         setNbaMoneyline(json)
+  //       })
+  //       .catch(console.error)
+  // }, [])
 
-  if (!nbaSpread, !nbaTotals, !nbaMoneyline) {
-    return <p>Loading current odds ...</p>
-  }
+  // if (!nbaSpread, !nbaTotals, !nbaMoneyline) {
+  //   return <p>Loading current odds ...</p>
+  // }
 
 //----------------current date -----------------
   const current = new Date();
@@ -70,92 +70,98 @@ const NBA = () => {
           <img></img> | NBA
         </div>
 
-
+    
         <Table hover>
             <thead>
               <tr>
-                <th>
+                <th className='date-header'>
                   { date }
                 </th>
-                <th>
+                <th className='spread-header'>
                   Spread
                 </th>
-                <th>
+                <th className='total-header'>
                   Total
                 </th>
-                <th>
+                <th className='moneyline-header'>
                   Moneyline
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                { nbaSpread.map(matchup => {
-                  return (
+                <td className='matchup'>
+                {/* { nbaSpread.map(matchup => {
+                  return ( */}
                       <div>
                         <th scope="row">
-                          <div>
-                            <p>{ matchup.home_team }</p> 
+                            <p>Team 1</p>
+                            {/* <p>{ matchup.home_team }</p>  */}
                             <br/>
-                            <p>{ matchup.away_team }</p>
-                          </div>
+                            <p>Team 2</p>
+                            {/* <p>{ matchup.away_team }</p> */}
                         </th>
                       </div>
-                  )
-                })}
+                  {/* )
+                })} */}
                 </td>
-                <td>
-                  { nbaSpread.map(spread => {
-                    return (
+                <td className='spread'>
+                  {/* { nbaSpread.map(spread => {
+                    return ( */}
                       <div>
                         <td>
                           <div>
-                            <p>{ spread.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ spread.bookmakers[0].markets[0].outcomes[0].price }</p>
+                            <p className='home-spread'>1.5    -125</p>
+                            {/* <p>{ spread.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ spread.bookmakers[0].markets[0].outcomes[0].price }</p> */}
                           </div>
                           <div>
-                            <p>{ spread.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ spread.bookmakers[0].markets[0].outcomes[1].price }</p>
+                            <p className='away-spread'>-1.5   100</p>
+                            {/* <p>{ spread.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ spread.bookmakers[0].markets[0].outcomes[1].price }</p> */}
                           </div>
                         </td>
                       </div>
-                    )
-                  })}
+                    {/* )
+                  })} */}
                 </td>
-                  <td>
-                  { nbaTotals.map(totals => {
-                    return (
+                  <td className='total'>
+                  {/* { nbaTotals.map(totals => {
+                    return ( */}
                       <div>
                         <td>
                           <div>
-                            <p>{ totals.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[0].price }</p>
+                            <p>5.5    -120</p>
+                            {/* <p>{ totals.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[0].price }</p> */}
                           </div>
                           <div>
-                            <p>{ totals.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[1].price }</p>
+                            <p>-5.5   -105</p>
+                            {/* <p>{ totals.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[1].price }</p> */}
                           </div>
                         </td>
                       </div>
-                    )
-                  })}
+                    {/* )
+                  })} */}
                   </td>
-                  <td>
-                  { nbaMoneyline.map(moneyline => {
-                    return (
+                  <td className='moneyline'>
+                  {/* { nbaMoneyline.map(moneyline => {
+                    return ( */}
                       <div>
                         <td>
                           <div>
-                            <p>{ moneyline.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[0].price }</p>
+                            <p>205</p>
+                            {/* <p>{ moneyline.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[0].price }</p> */}
                           </div>
                           <div>
-                            <p>{ moneyline.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[1].price }</p>
+                            <p>-278</p>
+                            {/* <p>{ moneyline.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[1].price }</p> */}
                           </div>
                         </td>
                       </div>
-                    )
-                  })}
+                    {/* )
+                  })} */}
                   </td>
               </tr>
             </tbody>
-        </Table> 
+        </Table>
       </div>
   )
 };
