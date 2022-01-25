@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
 body {
     margin: auto;
 }
 
 html {
-    background-color: cornflowerblue;
+    background: rgb(225,225,225);
+    background: linear-gradient(297deg, rgba(225,225,225,1) 0%, rgba(137,136,136,1) 50%, rgba(1,0,0,1) 100%);
 }
 
 /* -----leagues component----- */
 .homepage {
-    background-color: cornflowerblue;
+    background: rgb(225,225,225);
+    background: linear-gradient(297deg, rgba(225,225,225,1) 0%, rgba(137,136,136,1) 50%, rgba(1,0,0,1) 100%);  
 }
 
 .homepage-header{
@@ -17,6 +21,12 @@ html {
     align-items: center;
     font-size: 75pt;
     margin-top: 150px;
+    color: #E73725;
+    font-family: 'Jockey One', sans-serif;
+}
+
+.card-link {
+    text-decoration: none;
 }
 
 .leagues {
@@ -29,18 +39,50 @@ margin-top: 200px;
 .homepage-logos {
     height: 200px;
     width: 200px;
-    background-color: cornflowerblue;
-}
-
-.card-body{
-    background-color: cornflowerblue;
 }
 
 .card-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: cornflowerblue;
+    color: #E73725;
+    text-decoration: none;
+}
+
+/* -----nba link homepage----- */
+.nba-card-body {
+    background: #0054a4;
+}
+
+.nba-title {
+    background: #0054a4;
+}
+
+/* -----nfl link homepage----- */
+.nfl-card-body {
+    background: #003368;
+}
+
+.nfl-title {
+    background: #003368;
+}
+
+/* -----mlb link homepage----- */
+.mlb-card-body {
+    background: #ffffff;
+}
+
+.mlb-title {
+    background: #ffffff;
+}
+
+/* -----nhl link homepage----- */
+.nhl-card-body {
+    background: #000000;
+}
+
+.nhl-title {
+    background: #000000;
 }
 
 /* -----nba, nfl, mlb, nhl pages----- */
