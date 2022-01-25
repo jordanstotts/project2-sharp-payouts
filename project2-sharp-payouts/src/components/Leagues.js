@@ -1,12 +1,13 @@
 import React from 'react';
 import { CardGroup, Card, CardImg, CardBody, CardTitle } from 'reactstrap'
 import { Link } from 'react-router-dom'
+import 'animate.css';
 
 
 const Leagues = () => {
   return (
       <div>
-        <header>
+        <header class="animate__animated animate__backInUp">
             <h1 className='homepage-header'>Sharp Payouts</h1>
         </header>
         <CardGroup className='leagues'>
