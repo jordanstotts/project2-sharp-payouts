@@ -5,14 +5,20 @@ body {
 }
 
 html {
-    background: rgb(225,225,225);
-    background: linear-gradient(297deg, rgba(225,225,225,1) 0%, rgba(137,136,136,1) 50%, rgba(1,0,0,1) 100%);
+    background: #e1e1e1;
 }
 
 /* -----leagues component----- */
 .homepage {
-    background: rgb(225,225,225);
-    background: linear-gradient(297deg, rgba(225,225,225,1) 0%, rgba(137,136,136,1) 50%, rgba(1,0,0,1) 100%);  
+    background: #e1e1e1;
+}
+
+.homepage-header-caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jockey One', sans-serif;
+    font-size: 25px;
 }
 
 .homepage-header{
@@ -20,9 +26,11 @@ html {
     justify-content: center;
     align-items: center;
     font-size: 75pt;
-    margin-top: 150px;
+    margin: 150px 450px 0 450px;
     color: #E73725;
     font-family: 'Jockey One', sans-serif;
+    padding: 15px;
+    
 }
 
 .card-link {
