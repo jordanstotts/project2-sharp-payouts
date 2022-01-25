@@ -43,7 +43,6 @@ a .nhl-link {
     padding: 2px 10px 2px 10px;
 }
 
-
 .date-header {
     display: grid inline;
     text-align: center;
@@ -97,3 +96,23 @@ a .nhl-link {
     padding-top: 1em;
 }
 
+.current-league {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.league-name {
+    font-size: 20pt;
+    padding: 0 0 30px 20px;
+    padding-left: 20px;
+}
+
+/* -----nba specific----- */
+.nba-logo {
+    background-image: url(https://blog.logomyway.com/wp-content/uploads/2017/01/nba-logo-design.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 110px;
+}

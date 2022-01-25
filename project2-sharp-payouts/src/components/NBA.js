@@ -79,8 +79,9 @@ const NBA = () => {
         </div>
         </Nav>
 
-        <div>
-          <img></img> | NBA
+        <div className='current-league'>
+          <div className='nba-logo'></div>
+          <p className='league-name'>NBA</p> 
         </div>
 
     
