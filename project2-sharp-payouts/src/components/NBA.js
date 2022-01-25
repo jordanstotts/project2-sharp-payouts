@@ -17,6 +17,7 @@ const NBA = () => {
         })
         .catch(console.error)
   }, [])
+
 //---------totals fetch request --------------
   const [nbaTotals, setNbaTotals] = useState([])
     useEffect(() => {
@@ -110,10 +111,8 @@ const NBA = () => {
                   return (
                       <div>
                         <th scope="row">
-                            {/* <p>Team 1</p> */}
                             <p className='team'>{ matchup.home_team }</p> <p className='vs'>vs</p>
                             <br/>
-                            {/* <p>Team 2</p> */}
                             <p className='team'>{ matchup.away_team }</p>
                         </th>
                       </div>
@@ -126,11 +125,9 @@ const NBA = () => {
                       <div>
                         <td>
                           <div className='spread-odds'>
-                            {/* <p className='home-spread'>1.5    -125</p> */}
                             <p>{ spread.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ spread.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
-                            {/* <p className='away-spread'>-1.5   100</p> */}
                             <p>{ spread.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ spread.bookmakers[0].markets[0].outcomes[1].price }</p>
                           </div>
                         </td>
@@ -144,11 +141,9 @@ const NBA = () => {
                       <div>
                         <td>
                           <div>
-                            {/* <p>O 5.5    -120</p> */}
                             <p>{ totals.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
-                            {/* <p>U -5.5   -105</p> */}
                             <p>{ totals.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[1].price }</p>
                           </div>
                         </td>
@@ -162,11 +157,9 @@ const NBA = () => {
                       <div>
                         <td>
                           <div>
-                            {/* <p>205</p> */}
                             <p>{ moneyline.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
-                            {/* <p>-278</p> */}
                             <p>{ moneyline.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ moneyline.bookmakers[0].markets[0].outcomes[1].price }</p>
                           </div>
                         </td>

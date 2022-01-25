@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Nav, NavItem, NavLink, Table } from 'reactstrap'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const NHL = () => {
@@ -13,7 +13,6 @@ const NHL = () => {
     fetch(url)
         .then((res) => res.json())
         .then((json) => {
-          console.log(json)
           setNhlSpread(json)
         })
         .catch(console.error)
@@ -53,65 +52,79 @@ const NHL = () => {
 
   return (
     <div>
-      <Nav>
+      <Nav className='navbar'>
+          <NavItem className='homepage-link'>
+            <NavLink active href={"/"}>Sharp Payouts</NavLink>
+          </NavItem>
+        <div className='league-links'>  
           <NavItem>
-          <NavLink active href={"/NBA"}>NBA</NavLink>
+            <NavLink active href={"/NBA"}>
+              <button className='nba-link'>NBA</button>
+            </NavLink>
           </NavItem>
           <NavItem>
-          <NavLink active href={"/NFL"}>NFL</NavLink>
+            <NavLink active href={"/NFL"}>
+              <button className='nfl-link'>NFL</button>
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink active href={"/MLB"}>MLB</NavLink>
+            <NavLink active href={"/MLB"}>
+              <button className='mlb-link'>MLB</button>
+            </NavLink>
           </NavItem>
           <NavItem>
-          <NavLink active href={"/NHL"}>NHL</NavLink>
+            <NavLink active href={"/NHL"}>
+              <button className='nhl-link'>NHL</button>
+            </NavLink>
           </NavItem>
+        </div>
         </Nav>
 
-        <div>
-          <img></img> | NHL
+        <div className='current-league'>
+          <div className='nhl-logo'></div>
+          <p className='league-name'>NHL</p> 
         </div>
+
 
         <Table hover>
             <thead>
               <tr>
-                <th>
-                  { date }
+                <th className='games-header'>
+                  Games
+                  {/* { date } */}
                 </th>
-                <th>
+                <th className='spread-header'>
                   Spread
                 </th>
-                <th>
+                <th className='total-header'>
                   Total
                 </th>
-                <th>
+                <th className='moneyline-header'>
                   Moneyline
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td className='matchup'>
                 { nhlSpread.map(matchup => {
                   return (
                       <div>
                         <th scope="row">
-                          <div>
-                            <p>{ matchup.home_team }</p> 
+                            <p className='team'>{ matchup.home_team }</p> <p className='vs'>vs</p>
                             <br/>
-                            <p>{ matchup.away_team }</p>
-                          </div>
+                            <p className='team'>{ matchup.away_team }</p>
                         </th>
                       </div>
                   )
                 })}
                 </td>
-                <td>
+                <td className='spread'>
                   { nhlSpread.map(spread => {
                     return (
                       <div>
                         <td>
-                          <div>
+                          <div className='spread-odds'>
                             <p>{ spread.bookmakers[0].markets[0].outcomes[0].point}</p><p>{ spread.bookmakers[0].markets[0].outcomes[0].price }</p>
                           </div>
                           <div>
@@ -122,7 +135,7 @@ const NHL = () => {
                     )
                   })}
                 </td>
-                  <td>
+                  <td className='total'>
                   { nhlTotals.map(totals => {
                     return (
                       <div>
@@ -138,7 +151,7 @@ const NHL = () => {
                     )
                   })}
                   </td>
-                  <td>
+                  <td className='moneyline'>
                   { nhlMoneyline.map(moneyline => {
                     return (
                       <div>
