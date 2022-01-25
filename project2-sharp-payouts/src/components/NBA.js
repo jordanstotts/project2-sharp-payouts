@@ -88,8 +88,9 @@ const NBA = () => {
         <Table hover>
             <thead>
               <tr>
-                <th className='date-header'>
-                  { date }
+                <th className='games-header'>
+                  Games
+                  {/* { date } */}
                 </th>
                 <th className='spread-header'>
                   Spread

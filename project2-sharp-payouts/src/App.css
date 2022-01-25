@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Libre+Baskerville&display=swap')
 
 body {
     margin: auto;
@@ -144,27 +144,46 @@ a .nhl-link {
     padding: 2px 10px 2px 10px;
 }
 
+/* -----nba, nfl, mlb, nhl components logo/name----- */
+.current-league {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.league-name {
+    font-size: 25pt;
+    font-weight: bold;
+    padding: 0 0 30px 20px;
+    padding-left: 20px;
+    font-family: 'Libre Baskerville', serif;
+}
 
 /* -----table styling----- */
-.date-header {
+.games-header {
     display: grid inline;
     text-align: center;
-    color: blue;
+    color: black;
+    font-size: 14pt;
 }
 .spread-header {
     display: grid inline;
     text-align: center;
-    color: blue;
+    color: black;
+    font-size: 14pt;
 }
 .total-header {
     display: grid inline;
     text-align: center;
-    color: blue;
+    color: black;
+    font-size: 14pt;
 }
 .moneyline-header {
     display: grid inline;
     text-align: center;
-    color: blue;
+    color: black;
+    font-size: 14pt;
 }
 
 .table tbody tr .matchup div {
@@ -180,6 +199,7 @@ a .nhl-link {
     justify-items: center;
     margin: auto;
     padding-top: 1em;
+    font-weight: 575;
 
 }
 
@@ -189,6 +209,7 @@ a .nhl-link {
     justify-items: center;
     margin: auto;
     padding-top: 1em;
+    font-weight: 575;
 }
 
 .table tbody tr .moneyline div {
@@ -197,22 +218,9 @@ a .nhl-link {
     justify-items: center;
     margin: auto;
     padding-top: 1em;
+    font-weight: 575;
 }
 
-
-/* -----nba, nfl, mlb, nhl components log/name----- */
-.current-league {
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-    margin-top: 10px;
-}
-
-.league-name {
-    font-size: 20pt;
-    padding: 0 0 30px 20px;
-    padding-left: 20px;
-}
 
 /* -----nba component specific----- */
 .nba-logo {
