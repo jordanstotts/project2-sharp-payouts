@@ -52,21 +52,31 @@ const NBA = () => {
   return (
     <div>
       <Nav className='navbar'>
+          <NavItem className='homepage-link'>
+            <NavLink active href={"/"}>Sharp Payouts</NavLink>
+          </NavItem>
+        <div className='league-links'>  
           <NavItem>
-          <NavLink active href={"/"}>Sharp Payouts</NavLink>
+            <NavLink active href={"/NBA"}>
+              <button className='nba-link'>NBA</button>
+            </NavLink>
           </NavItem>
           <NavItem>
-          <NavLink active href={"/NBA"}>NBA</NavLink>
+            <NavLink active href={"/NFL"}>
+              <button className='nfl-link'>NFL</button>
+            </NavLink>
           </NavItem>
           <NavItem>
-          <NavLink active href={"/NFL"}>NFL</NavLink>
+            <NavLink active href={"/MLB"}>
+              <button className='mlb-link'>MLB</button>
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink active href={"/MLB"}>MLB</NavLink>
+            <NavLink active href={"/NHL"}>
+              <button className='nhl-link'>NHL</button>
+            </NavLink>
           </NavItem>
-          <NavItem>
-          <NavLink active href={"/NHL"}>NHL</NavLink>
-          </NavItem>
+        </div>
         </Nav>
 
         <div>

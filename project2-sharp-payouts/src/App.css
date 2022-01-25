@@ -2,6 +2,47 @@ body {
     margin: auto;
 }
 
+.navbar {
+    
+}
+
+.homepage-link a {
+    font-size: 50px;
+    color: purple;
+}
+
+.league-links {
+    display: flex;
+}
+
+a .nba-link {
+    border: 2px solid black;
+    color: black;
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+}
+
+a .nfl-link {
+    border: 2px solid black;
+    color: black;
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+}
+
+a .mlb-link {
+    border: 2px solid black;
+    color: black;
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+}
+
+a .nhl-link {
+    border: 2px solid black;
+    color: black;
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+}
+
 
 .date-header {
     display: grid inline;
