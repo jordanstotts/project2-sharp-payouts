@@ -1,12 +1,11 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Leagues from './components/Leagues';
-import NBA from './components/NBA';
-import NFL from './components/NFL';
-import MLB from './components/MLB';
-import NHL from './components/NHL';
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Leagues from './components/Leagues'
+import NBA from './components/NBA'
+import NFL from './components/NFL'
+import MLB from './components/MLB'
+import NHL from './components/NHL'
 import { Route, Routes } from 'react-router-dom'
-
 
 function App() {
   return (
@@ -21,7 +20,7 @@ function App() {
         </Routes>
       </main>
     </div>
-  );
-}
+  )
+  }
 
-export default App;
+export default App
