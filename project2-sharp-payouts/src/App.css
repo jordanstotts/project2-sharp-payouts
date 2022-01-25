@@ -165,32 +165,46 @@ a .nhl-link {
     display: grid inline;
     text-align: center;
     color: black;
-    font-size: 14pt;
+    font-size: 16pt;
 }
 .spread-header {
     display: grid inline;
     text-align: center;
     color: black;
-    font-size: 14pt;
+    font-size: 16pt;
 }
 .total-header {
     display: grid inline;
     text-align: center;
     color: black;
-    font-size: 14pt;
+    font-size: 16pt;
 }
 .moneyline-header {
     display: grid inline;
     text-align: center;
     color: black;
-    font-size: 14pt;
+    font-size: 16pt;
 }
 
 .table tbody tr .matchup div {
     display: grid;
     place-self: auto center;
     justify-items: center;
-    margin: 1.75em;
+    margin: 3em 1.75em;
+    font-size: 12.5pt;
+}
+
+.vs {
+    display: grid;
+    place-self: auto center;
+    justify-items: center;
+    margin: 0;
+}
+
+.team {
+    display: grid;
+    place-self: auto center;
+    justify-items: center;
 }
 
 .table tbody tr .spread div {
@@ -199,8 +213,8 @@ a .nhl-link {
     justify-items: center;
     margin: auto;
     padding-top: 1em;
+    font-size: 10pt;
     font-weight: 575;
-
 }
 
 .table tbody tr .total div {
@@ -209,6 +223,7 @@ a .nhl-link {
     justify-items: center;
     margin: auto;
     padding-top: 1em;
+    font-size: 10pt;
     font-weight: 575;
 }
 
@@ -218,7 +233,11 @@ a .nhl-link {
     justify-items: center;
     margin: auto;
     padding-top: 1em;
+    font-size: 10pt;
     font-weight: 575;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 8px;
 }
 
 
