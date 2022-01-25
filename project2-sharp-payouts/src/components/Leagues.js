@@ -10,7 +10,9 @@ const Leagues = () => {
         <header class="animate__animated animate__backInUp">
             <h1 className='homepage-header'>Sharp Payouts</h1>
         </header>
-        <p className='homepage-header-caption'>Spreads, Totals, and Moneyline odds</p>
+        <div class="animate__animated animate__backInUp">
+            <p className='homepage-header-caption'>Spreads, Totals, and Moneyline odds</p>
+        </div>       
         <CardGroup className='leagues'>
             <Link className='card-link' to={ "/NBA" }>
                 <div>
