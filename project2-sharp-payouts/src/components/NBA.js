@@ -143,11 +143,11 @@ const NBA = () => {
                       <div>
                         <td>
                           <div>
-                            <p>5.5    -120</p>
+                            <p>O 5.5    -120</p>
                             {/* <p>{ totals.bookmakers[0].markets[0].outcomes[0].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[0].price }</p> */}
                           </div>
                           <div>
-                            <p>-5.5   -105</p>
+                            <p>U -5.5   -105</p>
                             {/* <p>{ totals.bookmakers[0].markets[0].outcomes[1].point }</p><p>{ totals.bookmakers[0].markets[0].outcomes[1].price }</p> */}
                           </div>
                         </td>

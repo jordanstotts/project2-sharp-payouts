@@ -11,7 +11,7 @@ import { Route, Routes } from 'react-router-dom'
 function App() {
   return (
     <div className="app">
-      <main>
+      <main className='homepage'>
         <Routes>
           <Route path="/" element={ <Leagues /> } />
           <Route path="/NBA" element={ <NBA /> } />

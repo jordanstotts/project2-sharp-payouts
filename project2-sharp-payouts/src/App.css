@@ -2,10 +2,26 @@ body {
     margin: auto;
 }
 
-.navbar {
-    
+/* -----leagues component----- */
+.leagues {
+justify-content: space-evenly;
+align-items: center;
+align-content: center;
+margin-top: 200px;
 }
 
+.homepage-logos {
+    height: 200px;
+    width: 200px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -----nba, nfl, mlb, nhl pages----- */
 .homepage-link a {
     font-size: 50px;
     color: purple;
