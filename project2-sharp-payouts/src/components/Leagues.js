@@ -7,7 +7,7 @@ const Leagues = () => {
   return (
       <div>
         <header>
-            <h1>Sharp Payouts</h1>
+            <h1 className='homepage-header'>Sharp Payouts</h1>
         </header>
         <CardGroup className='leagues'>
             <Link className='nba-card' to={ "/NBA" }>
