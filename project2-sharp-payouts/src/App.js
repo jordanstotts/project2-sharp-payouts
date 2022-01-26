@@ -1,5 +1,4 @@
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Leagues from './components/Leagues'
 import NBA from './components/NBA'
 import NFL from './components/NFL'
