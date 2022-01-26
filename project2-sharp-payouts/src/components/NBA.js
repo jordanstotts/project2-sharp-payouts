@@ -1,5 +1,6 @@
 import React, { useState, useEffect }from 'react'
 import { Nav, NavItem, NavLink, Table } from 'reactstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const NBA = () => { 
   const API_KEY = process.env.REACT_APP_API_KEY
