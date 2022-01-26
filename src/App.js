@@ -4,6 +4,7 @@ import NBA from './components/NBA'
 import NFL from './components/NFL'
 import MLB from './components/MLB'
 import NHL from './components/NHL'
+import About from './components/About'
 import { Route, Routes } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/NFL" element={ <NFL /> } />
           <Route path="/MLB" element={ <MLB /> } />
           <Route path="/NHL" element={ <NHL /> } />
+          <Route path="/About" element={ <About /> } />
         </Routes>
       </main>
     </div>

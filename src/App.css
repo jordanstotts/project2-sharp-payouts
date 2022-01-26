@@ -140,6 +140,15 @@ a .nhl-link {
     padding: 2px 10px 2px 10px;
 }
 
+a .about-link {
+    border: 2px solid black;
+    background: #e1e1e1;
+    font-family: 'Jockey One', sans-serif;
+    color: #e73725;
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+}
+
 /* -----nba, nfl, mlb, nhl components logo/name----- */
 .current-league {
     display: flex;
@@ -268,4 +277,15 @@ a .nhl-link {
     background-repeat: no-repeat;
     width: 100px;
     height: 110px;
+}
+
+/* -----about page----- */
+.about-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 75px 0 20px 30px;
+}
+
+.terms {
+    margin-left: 30px;
 }

@@ -76,6 +76,11 @@ const NBA = () => {
               <button className='nhl-link'>NHL</button>
             </NavLink>
           </NavItem>
+          <NavItem>
+            <NavLink active href={ "/About" }>
+              <button className='about-link'>About</button>
+            </NavLink>
+          </NavItem>
         </div>
       </Nav>
 
